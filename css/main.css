@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100);
+            transform: translateX(-100);
+  }
+  60% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    /* transform: translateX(10px); */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100);
+            transform: translateX(-100);
+  }
+  60% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    /* transform: translateX(10px); */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100);
+            transform: translateX(100);
+  }
+  60% {
+    -webkit-transform: rotate(-20);
+            transform: rotate(-20);
+    /* transform: translateX(10px); */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100);
+            transform: translateX(100);
+  }
+  60% {
+    -webkit-transform: rotate(-20);
+            transform: rotate(-20);
+    /* transform: translateX(10px); */
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+}
+
+.header {
+  height: 95vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.808))), url(../img/nature.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)), url(../img/nature.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+
+.header .logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header .logo-box .logo {
+  height: 40px;
+}
+
+.header .logo-box .logo:hover {
+  -webkit-animation: moveInRight 2s ease-out;
+          animation: moveInRight 2s ease-out;
+}
+
+.header .text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* ignore relative to parent; place relative to self; perfect center */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header .text-box .heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.header .text-box .heading-primary .heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.header .text-box .heading-primary .heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.5px;
+}
+
+.header .text-box .btn:link,
+.header .text-box .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.header .text-box .btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header .text-box .btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.header .text-box .btn-white {
+  background-color: white;
+  color: #777;
+  padding: 20px 30px;
+}
+/*# sourceMappingURL=main.css.map */
